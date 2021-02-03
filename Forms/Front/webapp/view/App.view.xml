@@ -5,6 +5,7 @@
           xmlns:core="sap.ui.core"          
           xmlns:f="sap.ui.layout.form"  
           >
+          
 	<Shell id="shell">
 		<App id="app">
 			<pages>
