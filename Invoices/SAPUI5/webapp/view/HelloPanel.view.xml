@@ -5,7 +5,8 @@
           displayBlock="true">
     <Panel headerText="{i18n>helloPanel}" class="sapUiResponsiveMargin" width="auto">
         <content>
-            <Button text="{i18n>showHelloButtonText}" press=".onShowHello" class="sapUiSmallMarginEnd"></Button>
+            <Button text="{i18n>showHelloDialogBut}" press=".onOpenDialog" class="sapUiSmallMarginEnd"/>
+            <Button text="{i18n>showHelloButtonText}" press=".onShowHello" class="sapUiSmallMarginEnd"/>
             <Input value="{/recipient/name}"
                 valueLiveUpdate="true"
                 width="60%"/>
