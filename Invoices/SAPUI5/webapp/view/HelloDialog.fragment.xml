@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-<core:FragmentDefinition xmlns="sap.m"
-                         xmlns:core="sap.ui.core">
-    <Dialog id="helloDialog" title="Hello {/recipient/name}" draggable="true">
-        <content>
-            <core:Icon src="sap-icon://hello-world" size="3rem"></core:Icon>
-=======
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
     <Dialog id="helloDialog" title="Hello {/recipient/name}" draggable="true">
         <content>
             <core:Icon src="sap-icon://hello-world" size="3rem" class="sapUiTinyMargin"/>
->>>>>>> 05 Estructura Proyectos SAPUI5 05
         </content>
         <beginButton>
             <Button text="{i18n>dialogCloseBut}" press=".onCloseDialog"></Button>
