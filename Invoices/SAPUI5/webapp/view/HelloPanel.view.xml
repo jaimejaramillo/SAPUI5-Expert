@@ -5,6 +5,7 @@
           displayBlock="true">
     <Panel headerText="{i18n>helloPanel}" class="sapUiResponsiveMargin" width="auto">
         <content>
+<<<<<<< HEAD
             <Button text="{i18n>showHelloDialogBut}" 
                     press=".onOpenDialog" 
                     class="sapUiSmallMarginEnd"
@@ -14,6 +15,20 @@
                 valueLiveUpdate="true"
                 width="60%"/>
             <Text text="Hello {/recipient/name}" class="sapUiSmallMargin boldElements"/>
+=======
+            <Button id="helloDialogButton"
+                    icon="sap-icon://action"
+                    text="{i18n>showHelloDialogBut}" 
+                    press=".onOpenDialog" 
+                    class="sapUiTinyMarginEnd"/>
+            <Button text="{i18n>showHelloButtonText}" 
+                    press=".onShowHello" 
+                    class="sapUiTinyMarginEnd"/>
+            <Input value="{/recipient/name}"
+                   valueLiveUpdate="true"
+                   width="60%"/>
+            <Text text="Hello {/recipient/name}" class="sapUiSmallMargin boldElements sapThemeHighlight-asColor"/>
+>>>>>>> 05 Estructura Proyectos SAPUI5 05
         </content>
     </Panel>
     <core:Fragment fragmentName="ns.SAPUI5.view.Form01" type="XML"/>

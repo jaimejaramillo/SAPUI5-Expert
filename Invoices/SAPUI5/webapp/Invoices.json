@@ -3,7 +3,11 @@
         {
             "ProductName": "HDD-Samsung 250Gb",
             "Quantity": 21,
+<<<<<<< HEAD
             "ExtendedPrices": 87.2000,
+=======
+            "ExtendedPrice": 87.2000,
+>>>>>>> 05 Estructura Proyectos SAPUI5 05
             "ShipperName": "Fun Inc.",
             "ShippedDate": "2015-04-01T00:00:00",
             "Status": "A"
@@ -11,7 +15,11 @@
         {
             "ProductName": "Display Dell UH850 4K 27",
             "Quantity": 4,
+<<<<<<< HEAD
             "ExtendedPrices": 9.99999,
+=======
+            "ExtendedPrice": 9.99999,
+>>>>>>> 05 Estructura Proyectos SAPUI5 05
             "ShipperName": "ACME",
             "ShippedDate": "2015-02-18T00:00:00",
             "Status": "B"
@@ -19,7 +27,11 @@
         {
             "ProductName": "RAM PX DDR4 PC4-24000 16GB",
             "Quantity": 3,
+<<<<<<< HEAD
             "ExtendedPrices": 6.85000,
+=======
+            "ExtendedPrice": 6.85000,
+>>>>>>> 05 Estructura Proyectos SAPUI5 05
             "ShipperName": "ACME",
             "ShippedDate": "2015-03-02T00:00:00",
             "Status": "B"
@@ -27,7 +39,11 @@
         {
             "ProductName": "Intel Core i7-9700K 3.6Ghz",
             "Quantity": 2,
+<<<<<<< HEAD
             "ExtendedPrices": 8.8000,
+=======
+            "ExtendedPrice": 8.8000,
+>>>>>>> 05 Estructura Proyectos SAPUI5 05
             "ShipperName": "ACME",
             "ShippedDate": "2015-04-12T00:00:00",
             "Status": "C"
@@ -35,7 +51,11 @@
         {
             "ProductName": "AMD Radeon RX580 8GB GDDR5",
             "Quantity": 1,
+<<<<<<< HEAD
             "ExtendedPrices": 2.71212,
+=======
+            "ExtendedPrice": 2.71212,
+>>>>>>> 05 Estructura Proyectos SAPUI5 05
             "ShipperName": "Fun Inc.",
             "ShippedDate": "2015-01-27T00:00:00",
             "Status": "A"

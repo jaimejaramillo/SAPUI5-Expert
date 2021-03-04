@@ -6,6 +6,15 @@
         <App>
             <pages>
                 <Page title="{i18n>appTitle}">
+<<<<<<< HEAD
+=======
+                    <headerContent>
+                        <Button id="helloDialogHeader"
+                                icon="sap-icon://action"
+                                press=".onOpenDialogHeader" 
+                                class="sapUiTinyMarginEnd"/>                 
+                    </headerContent>
+>>>>>>> 05 Estructura Proyectos SAPUI5 05
                     <content>
                         <mvc:XMLView viewName="ns.SAPUI5.view.HelloPanel"/>
                         <mvc:XMLView viewName="ns.SAPUI5.view.InvoicesList"/>

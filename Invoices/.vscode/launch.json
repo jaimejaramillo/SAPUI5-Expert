@@ -10,7 +10,11 @@
         "--standalone",
         "/nsSAPUI5/index.html",
         "--ui5",
+<<<<<<< HEAD
         "{\"version\":\"1.84.6\"}"
+=======
+        "{\"version\":\".\"}"
+>>>>>>> 05 Estructura Proyectos SAPUI5 05
       ],
       "cwd": "${workspaceFolder}/SAPUI5",
       "env": {
@@ -18,7 +22,71 @@
         "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
         "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/Invoices/SAPUI5\"}"
       },
+<<<<<<< HEAD
       "envFile": "${workspaceFolder}/SAPUI5/.env1",
+=======
+      "envFile": "${workspaceFolder}/SAPUI5/.env2",
+      "preLaunchTask": "Build Invoices"
+    },
+    {
+      "name": "Run Mock Server Invoices-SAPUI5",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/invoices-approuter/node_modules/@sap/html5-repo-mock/index.js",
+      "args": [
+        "--standalone",
+        "/nsSAPUI5/test/mockServer.html",
+        "--ui5",
+        "{\"version\":\".\"}"
+      ],
+      "cwd": "${workspaceFolder}/SAPUI5",
+      "env": {
+        "PORT": "6004",
+        "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
+        "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/Invoices/SAPUI5\"}"
+      },
+      "envFile": "${workspaceFolder}/SAPUI5/.env3",
+      "preLaunchTask": "Build Invoices"
+    },
+    {
+      "name": "Run Test Invoices-SAPUI5",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/invoices-approuter/node_modules/@sap/html5-repo-mock/index.js",
+      "args": [
+        "--standalone",
+        "/nsSAPUI5/test/unit/unitTest.qunit.html",
+        "--ui5",
+        "{\"version\":\".\"}"
+      ],
+      "cwd": "${workspaceFolder}/SAPUI5",
+      "env": {
+        "PORT": "6004",
+        "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
+        "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/Invoices/SAPUI5\"}"
+      },
+      "envFile": "${workspaceFolder}/SAPUI5/.env4",
+      "preLaunchTask": "Build Invoices"
+    },
+    {
+      "name": "Run Opa Test Invoices-SAPUI5",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/invoices-approuter/node_modules/@sap/html5-repo-mock/index.js",
+      "args": [
+        "--standalone",
+        "/nsSAPUI5/test/integration/opaTests.qunit.html",
+        "--ui5",
+        "{\"version\":\".\"}"
+      ],
+      "cwd": "${workspaceFolder}/SAPUI5",
+      "env": {
+        "PORT": "6004",
+        "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
+        "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/Invoices/SAPUI5\"}"
+      },
+      "envFile": "${workspaceFolder}/SAPUI5/.env5",
+>>>>>>> 05 Estructura Proyectos SAPUI5 05
       "preLaunchTask": "Build Invoices"
     }
   ]

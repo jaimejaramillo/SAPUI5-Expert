@@ -6,10 +6,24 @@
   },
   "routes": [
     {
+<<<<<<< HEAD
+=======
+      "authenticationType": "none",
+      "csrfProtection": false,
+      "source": "^/Northwind/(.*)$",
+      "destination": "Northwind",
+      "target": "$1"
+    },
+    {
+>>>>>>> 05 Estructura Proyectos SAPUI5 05
       "source": "^(.*)$",
       "target": "$1",
       "service": "html5-apps-repo-rt",
       "authenticationType": "xsuaa"
     }
   ]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 05 Estructura Proyectos SAPUI5 05

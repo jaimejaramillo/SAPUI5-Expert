@@ -1,19 +1,32 @@
 // @ts-nocheck
+<<<<<<< HEAD
 //ts-nocheck
 /* eslint-disable no-undef */
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/m/MessageToast",
     "sap/ui/core/Fragment"
+=======
+/* eslint-disable no-undef */
+sap.ui.define([
+    "sap/ui/core/mvc/Controller",
+    "sap/m/MessageToast"
+
+>>>>>>> 05 Estructura Proyectos SAPUI5 05
 ],
     /**
      * 
      * @param {typeof sap.ui.core.mvc.Controller} Controller 
      * @param {typeof sap.m.MessageToast} MessageToast 
+<<<<<<< HEAD
      * @param {typeof sap.ui.model.resource.ResourceModel} ResourceModel 
      * @param {typeof sap.ui.core.Fragment} Fragment
      */
     function (Controller, MessageToast, Fragment) {
+=======
+     */
+    function (Controller, MessageToast) {
+>>>>>>> 05 Estructura Proyectos SAPUI5 05
         "use strict";
 
         return Controller.extend("ns.SAPUI5.controller.HelloPanel", {
@@ -31,6 +44,7 @@ sap.ui.define([
             },
 
             onOpenDialog: function () {
+<<<<<<< HEAD
 
                 const oView = this.getView();
 
@@ -50,6 +64,11 @@ sap.ui.define([
             onCloseDialog: function () {
                 this.byId("helloDialog").close();
             }
+=======
+                this.getOwnerComponent().openHelloDialog();
+            }
+            
+>>>>>>> 05 Estructura Proyectos SAPUI5 05
         });
 
     });
