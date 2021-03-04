@@ -9,4 +9,5 @@
             </f:content>
         </f:SimpleForm>
     </Panel>
+    
 </core:FragmentDefinition>

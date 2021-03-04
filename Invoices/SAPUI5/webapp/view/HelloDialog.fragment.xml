@@ -7,4 +7,5 @@
             <Button text="{i18n>dialogCloseBut}" press=".onCloseDialog"></Button>
         </beginButton>
     </Dialog>
+    
 </core:FragmentDefinition>
