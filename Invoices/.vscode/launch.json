@@ -10,11 +10,7 @@
         "--standalone",
         "/nsSAPUI5/index.html",
         "--ui5",
-<<<<<<< HEAD
-        "{\"version\":\"1.84.6\"}"
-=======
         "{\"version\":\".\"}"
->>>>>>> 05 Estructura Proyectos SAPUI5 05
       ],
       "cwd": "${workspaceFolder}/SAPUI5",
       "env": {
@@ -22,9 +18,6 @@
         "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
         "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/Invoices/SAPUI5\"}"
       },
-<<<<<<< HEAD
-      "envFile": "${workspaceFolder}/SAPUI5/.env1",
-=======
       "envFile": "${workspaceFolder}/SAPUI5/.env2",
       "preLaunchTask": "Build Invoices"
     },
@@ -86,7 +79,6 @@
         "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/Invoices/SAPUI5\"}"
       },
       "envFile": "${workspaceFolder}/SAPUI5/.env5",
->>>>>>> 05 Estructura Proyectos SAPUI5 05
       "preLaunchTask": "Build Invoices"
     }
   ]
