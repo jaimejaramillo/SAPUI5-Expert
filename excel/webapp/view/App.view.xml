@@ -1,0 +1,95 @@
+<mvc:View
+    controllerName="ns.excel.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:u="sap.ui.unified"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                        <u:FileUploader id="fileUpload"
+                                        buttonText="{i18n>btUploadExcel}"
+                                        multiple="true"
+                                        sameFilenameAllowed="true"
+                                        fileType="xls,xlsx"
+                                        change="uploadExcel"/>
+                        <Table items="{excelModel>/}">
+                            <columns>
+                                <Column width="100px">
+                                    <header>
+                                        <Label text="{i18n>columnId}"></Label>
+                                    </header>                            
+                                </Column>
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>columnName}"></Label>
+                                    </header>                            
+                                </Column>                                  
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>columnDepartmen}"></Label>
+                                    </header>                            
+                                </Column>    
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>columnDepartmentDescrip}"></Label>
+                                    </header>                            
+                                </Column>    
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>columnJobCode}"></Label>
+                                    </header>                            
+                                </Column>       
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>columnJobTitle}"></Label>
+                                    </header>                            
+                                </Column>    
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>columnRate}"></Label>
+                                    </header>                            
+                                </Column>                            
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>columnCurrency}"></Label>
+                                    </header>                            
+                                </Column>     
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>columnStartDate}"></Label>
+                                    </header>                            
+                                </Column>        
+                                <Column>
+                                    <header>
+                                        <Label text="{i18n>columnEndDate}"></Label>
+                                    </header>                            
+                                </Column>  
+                            </columns>                                                                                                                                                                                       
+                            <items>
+                                <ColumnListItem >
+                                    <cells>
+                                        <Text text="{excelModel>id}"/>
+                                        <Input value="{excelModel>name}"/>
+                                        <Input value="{excelModel>department}"/>
+                                        <Input value="{excelModel>departmentDescrip}"/>
+                                        <Input value="{excelModel>jobCode}"/>
+                                        <Input value="{excelModel>jobTitle}"/>
+                                        <Input value="{excelModel>monthlyRate}"/> 
+                                        <Text text="{excelModel>currency}"/>  
+                                        <DatePicker value="{excelModel>startDate}" displayFormat="short"/>
+                                        <DatePicker value="{excelModel>endDate}" displayFormat="short"/>                       
+                                    </cells>                                
+                                </ColumnListItem>                          
+                            </items>
+                        </Table>
+                    </content>
+
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
