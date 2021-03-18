@@ -16,28 +16,36 @@ sap.ui.define([
 
         return Controller.extend("ns.SAPUI5.controller.Details", {
 
-            onInit: function () {
-                const oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-                oRouter.getRoute("Details").attachPatternMatched(this._onObjectMatch, this);
-            },
-
             _onObjectMatch: function (oEvent) {
+                this.getView().byId("rating").reset();
                 this.getView().bindElement({
                     path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").invoicePath),
                     model: "northwind"
                 });
             },
 
+            onInit: function () {
+                const oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                oRouter.getRoute("Details").attachPatternMatched(this._onObjectMatch, this);
+            },
+
             onNavBack: function () {
                 const oHistory = new History.getInstance();
                 const sPreviousHash = oHistory.getPreviousHash();
-                if(sPreviousHash != undefined){
+                if (sPreviousHash != undefined) {
                     window.history.go(-1);
-                }else{
+                } else {
                     const oRouter = UIComponent.getRouterFor(this);
                     oRouter.navTo("RouteApp", {}, true);
                 };
 
+            },
+
+            onRatingChange: function (oEvent) {
+                const fvalue = oEvent.getParameter("value");
+                const oResourceBundle = this.getView().getModel("i18n").getResourceBundle();
+
+                sap.m.MessageToast.show(oResourceBundle.getText("ratingConfirmation", [fvalue]));
             }
 
         });
