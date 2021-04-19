@@ -3,19 +3,21 @@ sap.ui.define([
     "sap/ui/core/UIComponent",
     "./model/Models",
     "sap/ui/model/resource/ResourceModel",
-    "./controller/HelloDialog"
+    "./controller/HelloDialog",
+    "sap/ui/Device"
 ],
     /**
      * 
      * @param {typeof sap.ui.core.UIComponent} UIComponent 
      * @param {typeof sap.ui.model.resource.ResourceModel} ResourceModel 
+     * @param {typeof sap.ui.Device} Device
      */
-    function (UIComponent, Models, ResourceModel, HelloDialog) {
+    function (UIComponent, Models, ResourceModel, HelloDialog, Device) {
 
         return UIComponent.extend("ns.SAPUI5.Component", {
 
             metadata: {
-                manifest : "json"
+                manifest: "json"
             },
 
             init: function () {
@@ -38,13 +40,22 @@ sap.ui.define([
                 this.getRouter().initialize();
             },
 
-            exit: function(){
+            exit: function () {
                 this._helloDialog.destroy();
                 delete this._helloDialog;
             },
 
-            openHelloDialog: function(){
+            openHelloDialog: function () {
                 this._helloDialog.open();
+            },
+
+            getContentDensityClass: function () {
+                if (!Device.support.touch) {
+                    this._sContentDensityClass = "sapUiSizeCompact";
+                } else {
+                    this._sContentDensityClass = "sapUiSizeCozy";
+                }
+                return this._sContentDensityClass;
             }
 
         });

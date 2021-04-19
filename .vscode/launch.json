@@ -167,6 +167,26 @@
       "env": {
         "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/excel\"}"
       }
+    },
+    {
+      "name": "Run logali-Employees",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/logali/logali-approuter/node_modules/@sap/html5-repo-mock/index.js",
+      "args": [
+        "--standalone",
+        "/nsEmployees/index.html",
+        "--ui5",
+        "{\"version\":\".\"}"
+      ],
+      "cwd": "${workspaceFolder}/logali/Employees",
+      "env": {
+        "PORT": "6004",
+        "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
+        "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/logali/Employees\"}"
+      },
+      "envFile": "${workspaceFolder}/logali/Employees/.env1",
+      "preLaunchTask": "Build logali"
     }
   ],
   "compounds": [],

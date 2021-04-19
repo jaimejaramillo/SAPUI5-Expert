@@ -3,6 +3,14 @@
           xmlns:mvc="sap.ui.core.mvc"
           displayBlock="true">
     <Page title="{i18n>appTitle}">
+        <landmarkInfo>
+            <PageAccessibleLandmarkInfo rootRole="Region"
+                                        rootLabel="{i18n>overViewRootLable}"
+                                        contentRole="Main"
+                                        contentLabel="{i18n>overViewContentLable}"
+                                        headerRole="Banner"
+                                        headerLabel="{i18n>overViewHeaderLabel}"/>
+        </landmarkInfo>
         <headerContent>
             <Button id="helloDialogHeader"
                     icon="sap-icon://action"
