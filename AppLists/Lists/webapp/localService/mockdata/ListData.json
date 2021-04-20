@@ -1,0 +1,138 @@
+{
+    "Products": [
+        {   
+            "Id": "P1",
+            "Material": "Portatil",
+            "Brand": "Compaq",
+            "Model": "610",
+            "Weight": "3 KG",
+            "Price": "300",
+            "Currency": "EUR",
+            "Properties": [
+                {
+                    "Id": "1",
+                    "Text": "Text 1"
+                },
+                {
+                    "Id": "2",
+                    "Text": "Text 2"
+                },
+                {
+                    "Id": "3",
+                    "Text": "Text 3"
+                },
+                {
+                    "Id": "4",
+                    "Text": "Text 4"
+                }
+            ]
+        },
+        {
+            "Id": "P2",
+            "Material": "PC",
+            "Brand": "Compaq",
+            "Model": "1610",
+            "Weight": "7 KG",
+            "Price": "800",
+            "Currency": "EUR",
+            "Properties": [
+                {
+                    "Id": "1",
+                    "Text": "Text 1"
+                },
+                {
+                    "Id": "2",
+                    "Text": "Text 2"
+                },
+                {
+                    "Id": "3",
+                    "Text": "Text 3"
+                },
+                {
+                    "Id": "4",
+                    "Text": "Text 4"
+                }
+            ]
+        },        
+        {
+            "Id": "P3",
+            "Material": "Grapadora",
+            "Brand": "American Crafts",
+            "Model": "1600",
+            "Weight": "1 KG",
+            "Price": "20",
+            "Currency": "EUR",
+            "Properties": [
+                {
+                    "Id": "5",
+                    "Text": "Text 5"
+                },
+                {
+                    "Id": "6",
+                    "Text": "Text 6"
+                },
+                {
+                    "Id": "7",
+                    "Text": "Text 7"
+                },
+                {
+                    "Id": "8",
+                    "Text": "Text 8"
+                }
+            ]            
+        },
+        {
+            "Id": "P4",
+            "Material": "Silla de escritorio",
+            "Brand": "ASPEN",
+            "Model": "R45",
+            "Weight": "5 KG",
+            "Price": "96",
+            "Currency": "EUR",
+            "Properties": [
+                {
+                    "Id": "9",
+                    "Text": "Text 9"
+                },
+                {
+                    "Id": "10",
+                    "Text": "Text 10"
+                },
+                {
+                    "Id": "11",
+                    "Text": "Text 11"
+                },
+                {
+                    "Id": "12",
+                    "Text": "Text 12"
+                }
+            ]            
+        }
+    ],
+    "News": [
+        {
+            "Title": "Los billetes del 'AVE barato' de Madrid a Barcelona costarán 10 y 60 euros",
+            "Description": "El servicio contará en su estreno con dos frecuencias en cada sentido, aunque al final del 2020 se",
+            "Unread": true,
+            "Author": "EL PAIS",
+            "Priority": "Medium",
+            "ShowCloseButtom": false
+        },
+        {
+            "Title": "Adif pone en marcha el 'macroproyecto', para convertir Chamartín en 'la mejor estación de Europa'",
+            "Description": "La compañía pública titular y gestora de las infraestructuras ferroviarias dará el pistoletazo de",
+            "Unread": false,
+            "Author": "20 minutos",
+            "Priority": "High",
+            "ShowCloseButtom": true
+        },
+        {
+            "Title": "Los coches sin distintivo ambiental no podrán aparcar en la zona SER de Madrid desde principios del año",
+            "Description": "El ayundamiento de Madrid inicia esta semana la campaña informativa sobre la nueva restricción",
+            "Unread": true,
+            "Author": "EL MUNDO",
+            "Priority": "None",
+            "ShowCloseButtom": true
+        }
+    ]
+}
