@@ -45,10 +45,10 @@
   "sap.ui5": {
     "flexEnabled": false,
     "rootView": {
-      "viewName": "ns.Employees.view.mainView",
+      "viewName": "ns.Employees.view.Main",
       "type": "XML",
       "async": true,
-      "id": "mainView"
+      "id": "Main"
     },
     "dependencies": {
       "minUI5Version": "1.60.1",
@@ -98,21 +98,28 @@
       },
       "routes": [
         {
-          "name": "RoutemainView",
-          "pattern": "RoutemainView",
+          "name": "RouteMain",
+          "pattern": "RouteMain",
           "target": [
-            "TargetmainView"
+            "TargetMain"
           ]
         }
       ],
       "targets": {
-        "TargetmainView": {
+        "TargetMain": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "mainView",
-          "viewName": "mainView"
-        }
+          "viewId": "Main",
+          "viewName": "Main"
+        },
+        "TargetMasterEmployee": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "MasterEmployee",
+          "viewName": "MasterEmployee"
+        }        
       }
     }
   }
