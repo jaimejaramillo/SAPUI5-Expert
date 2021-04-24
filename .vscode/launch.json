@@ -108,67 +108,6 @@
       "preLaunchTask": "Build Invoices"
     },
     {
-      "name": "Start excel",
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "npm",
-      "cwd": "${workspaceFolder}/excel",
-      "windows": {
-        "runtimeExecutable": "npm.cmd"
-      },
-      "runtimeArgs": [
-        "run-script",
-        "start"
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "port": 9229,
-      "env": {
-        "DEBUG": "--inspect",
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/excel\"}"
-      }
-    },
-    {
-      "name": "Start excel Mock",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/excel",
-      "runtimeExecutable": "npm",
-      "windows": {
-        "runtimeExecutable": "npm.cmd"
-      },
-      "runtimeArgs": [
-        "run-script",
-        "start-mock"
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "port": 9229,
-      "env": {
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/excel\"}"
-      }
-    },
-    {
-      "name": "Start excel Local",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}/excel",
-      "runtimeExecutable": "npm",
-      "windows": {
-        "runtimeExecutable": "npm.cmd"
-      },
-      "runtimeArgs": [
-        "run-script",
-        "start-local"
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "port": 9229,
-      "env": {
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/excel\"}"
-      }
-    },
-    {
       "name": "Run logali-Employees",
       "type": "node",
       "request": "launch",
