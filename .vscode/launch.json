@@ -1,11 +1,4 @@
 {
-  "inputs": [
-    {
-      "id": "UI5Version",
-      "type": "command",
-      "command": "sap.ux.appGenerator.ui5Version"
-    }
-  ],
   "configurations": [
     {
       "name": "Run Forms-Front",
@@ -126,8 +119,88 @@
       },
       "envFile": "${workspaceFolder}/logali/Employees/.env1",
       "preLaunchTask": "Build logali"
+    },
+    {
+      "name": "Start jaime",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "cwd": "${workspaceFolder}/jaime",
+      "windows": {
+        "runtimeExecutable": "npm.cmd",
+        "args": [
+          "--",
+          "--ui5Uri https://ui5.sap.com --ui5 1.88.1",
+          "--backendConfig",
+          "\"[{\\\"path\\\":\\\"/sap\\\",\\\"destination\\\":\\\"Northwind\\\"}]\""
+        ]
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "DEBUG": "--inspect",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/jaime\"}"
+      },
+      "args": [
+        "--",
+        "--ui5Uri https://ui5.sap.com --ui5 1.88.1",
+        "--backendConfig",
+        "[{\"path\":\"/sap\",\"destination\":\"Northwind\"}]"
+      ]
+    },
+    {
+      "name": "Start jaime Mock",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/jaime",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start-mock"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/jaime\"}"
+      }
+    },
+    {
+      "name": "Start jaime Local",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/jaime",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start-local"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/jaime\"}"
+      }
     }
   ],
   "compounds": [],
+  "inputs": [
+    {
+      "id": "UI5Version",
+      "type": "command",
+      "command": "sap.ux.appGenerator.ui5Version"
+    }
+  ],
   "version": "0.2.0"
 }

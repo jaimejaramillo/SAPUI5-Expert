@@ -16,7 +16,7 @@
       "version": "1.40.12"
     },
     "dataSources": {
-      "Northwind": {
+      "Northwind.svc": {
         "uri": "Northwind/V2/Northwind/Northwind.svc/",
         "type": "OData",
         "settings": {
@@ -70,7 +70,7 @@
         }
       },
       "odataNorthwind": {
-        "dataSource": "Northwind",
+        "dataSource": "Northwind.svc",
         "preload": true,
         "settings": {
           "defaultOperationMode": "Server",
@@ -113,14 +113,7 @@
           "clearControlAggregation": false,
           "viewId": "Main",
           "viewName": "Main"
-        },
-        "TargetMasterEmployee": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "MasterEmployee",
-          "viewName": "MasterEmployee"
-        }        
+        }
       }
     }
   }
