@@ -5,7 +5,7 @@ sap.ui.define([
 ], function (Controller, formatter) {
 
     function onInit() {
-
+        this._bus = sap.ui.getCore().getEventBus();
     };
 
     function onCreateIncidence() {
@@ -21,24 +21,37 @@ sap.ui.define([
     };
 
     function onDeleteIncidence(oEvent){
-        var tableIncidence = this.getView().byId("tableIncidence");
-        var rowIncidence = oEvent.getSource().getParent().getParent();
-        var incidenceModel = this.getView().getModel("incidenceModel");
-        var odata = incidenceModel.getData();
-        var contextObject = rowIncidence.getBindingContext("incidenceModel");
-
-        odata.splice(contextObject.index-1,1);
-        for(var i in odata){
-            odata[i].index = parseInt(i)+1;
-        };
-
-        incidenceModel.refresh();
-        tableIncidence.removeContent(rowIncidence);
-
-        for(var j in tableIncidence.getContent()){
-            tableIncidence.getContent()[j].bindElement("incidenceModel>/"+j);
-        };
+        var oContext = oEvent.getSource().getBindingContext("incidenceModel").getObject();
+        this._bus.publish("incidence", "onDeleteIncidence", { 
+            IncidenceId: oContext.IncidenceId,
+            SapId: oContext.SapId,
+            EmployeeId: oContext.EmployeeId
+        } );
     };
+
+    function onSaveIncidence(oEvent){
+        var incidence = oEvent.getSource().getParent().getParent();
+        var incidenceRow = incidence.getBindingContext("incidenceModel");        
+        this._bus.publish("incidence", "onSaveIncidence", { incidenceRow : incidenceRow.sPath.replace('/','') } );
+    };
+
+    function updateIncidenteCreationDate(oEvent){
+        var context = oEvent.getSource().getBindingContext("incidenceModel");
+        var oContext = context.getObject();
+        oContext.CreationDateX = true;
+    };
+
+    function updateIncidenteReason(oEvent){
+        var context = oEvent.getSource().getBindingContext("incidenceModel");
+        var oContext = context.getObject();
+        oContext.ReasonX = true;
+    };
+
+    function updateIncidenceType(oEvent){
+        var context = oEvent.getSource().getBindingContext("incidenceModel");
+        var oContext = context.getObject();
+        oContext.TypeX = true;
+    }    
 
     var EmployeeDetails = Controller.extend("ns.Employees.controller.EmployeeDetails", {});
 
@@ -46,6 +59,11 @@ sap.ui.define([
     EmployeeDetails.prototype.onCreateIncidence = onCreateIncidence;
     EmployeeDetails.prototype.onDeleteIncidence = onDeleteIncidence;
     EmployeeDetails.prototype.Formatter = formatter;
+    EmployeeDetails.prototype.onSaveIncidence = onSaveIncidence;
+    EmployeeDetails.prototype.updateIncidenteCreationDate = updateIncidenteCreationDate;
+    EmployeeDetails.prototype.updateIncidenteReason = updateIncidenteReason;
+    EmployeeDetails.prototype.updateIncidenceType = updateIncidenceType;
+
 
     return EmployeeDetails;
 });
