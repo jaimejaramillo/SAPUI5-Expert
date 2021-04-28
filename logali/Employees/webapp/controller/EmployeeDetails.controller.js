@@ -1,9 +1,9 @@
 // @ts-nocheck
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
+    "ns/Employees/controller/Base.controller",
     "ns/Employees/model/formatter",
     "sap/m/MessageBox"
-], function (Controller, formatter, MessageBox) {
+], function (Base, formatter, MessageBox) {
 
     function onInit() {
         this._bus = sap.ui.getCore().getEventBus();
@@ -109,9 +109,9 @@ sap.ui.define([
             oContext.EnableSave = false;
         }
 
-    }
+    };
 
-    var EmployeeDetails = Controller.extend("ns.Employees.controller.EmployeeDetails", {});
+    var EmployeeDetails = Base.extend("ns.Employees.controller.EmployeeDetails", {});
 
     EmployeeDetails.prototype.onInit = onInit;
     EmployeeDetails.prototype.onCreateIncidence = onCreateIncidence;
@@ -121,7 +121,6 @@ sap.ui.define([
     EmployeeDetails.prototype.updateIncidenceCreationDate = updateIncidenceCreationDate;
     EmployeeDetails.prototype.updateIncidenceReason = updateIncidenceReason;
     EmployeeDetails.prototype.updateIncidenceType = updateIncidenceType;
-
 
     return EmployeeDetails;
 });

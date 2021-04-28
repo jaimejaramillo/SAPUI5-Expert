@@ -1,15 +1,14 @@
 // @ts-nocheck
-sap.ui.define([
-    "sap/ui/core/mvc/Controller",
+sap.ui.define([    
+    "ns/Employees/controller/Base.controller",
     "sap/ui/model/Filter",
     "sap/ui/model/FilterOperator"
 ],
 	/**
-     * @param {typeof sap.ui.core.mvc.Controller} Controller
      * @param {typeof sap.ui.model.Filter} Filter
      * @param {typeof sap.ui.model.FilterOperator} FilterOperator
      */
-    function (Controller, Filter, FilterOperator) {
+    function (Base, Filter, FilterOperator) {
         "use strict";
 
         function onInit() {
@@ -91,22 +90,7 @@ sap.ui.define([
             this._bus.publish("flexible","showEmployee", path);
         };
 
-        var Main = Controller.extend("ns.Employees.controller.MasterEmployee", {});
-
-        Main.prototype.onValidate = function () {
-            var inputEmployee = this.getView().byId("inputEmployee");
-            var valueEmployee = inputEmployee.getValue();
-
-            if (valueEmployee.length === 6) {
-                //inputEmployee.setDescription("OK");
-                this.getView().byId("labelCountry").setVisible(true);
-                this.getView().byId("slCountry").setVisible(true);
-            } else {
-                //inputEmployee.setDescription("Not OK");
-                this.getView().byId("labelCountry").setVisible(false);
-                this.getView().byId("slCountry").setVisible(false);
-            }
-        };
+        var Main = Base.extend("ns.Employees.controller.MasterEmployee", {});
 
         Main.prototype.onInit = onInit;
         Main.prototype.onFilter = onFilter;
